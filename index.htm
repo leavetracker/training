@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo</title>
+    <script type="text/javascript">
+        var Training = {};
+    </script>
+    <script src="common/jquery/js/jquery-1.7.1.min.js"></script>
+    <script src="common/underscore/underscore.js"></script>
+    <script src="common/backbone/backbone.js"></script>
+    <link href="common/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="common/bootstrap/js/bootstrap.js"></script>
+    <script src="backbone-examples/initialize.js"></script>
+    <script src="backbone-examples/js/backbone-example-model.js"></script>
+    <script src="backbone-examples/js/backbone-example-view.js"></script>
+    <script type="text/javascript">
+        var onPageLoad = function () {
+            var model = new Training.Backbone.ExampleModel();
+            var view = new Training.Backbone.ExampleView({ model: model });
+            
+        }
+    </script>
+</head>
+
+<body onload="onPageLoad()">
+    <div id="backbone-example-holder">
+        <div class="form-holder">
+            <div>
+                <label>Task:</label>
+                <textarea class="input-task"></textarea>
+            </div>
+            
+            <div>
+                <label>Date:</label>
+                <input class="task-date" type="date" name="taskDate" value="2014-02-10">
+            </div>
+        </div>
+        <button class="btn btn-primary btn-add-task">Add Task</button>
+    </div>
+</body>
+</html>
